@@ -1,0 +1,83 @@
+/*
+.contact_form */
+
+.contact_form h1, .contact_form label {
+    font-family:'Times New Roman', Times, serif;
+}
+
+.notification{
+    color:crimson;
+    display: inline;
+
+}
+
+.contact_form label{
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 3px;
+    display: inline-block;
+    float: left;
+}
+
+.contact_form input{
+    height: 35px;
+    width: 200px;
+}
+
+.contact_form textarea{
+    width: 300px;
+    padding: 5px
+}
+
+.contact_form input, .contact_form textarea {
+    border: 2px solid #aaa;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px #fa0707;
+}
+
+.contact_form input:focus, .contact_form textarea:focus{
+    background-color:chartreuse;
+    box-shadow: 0px 0px 10px #e740bd;
+}
+
+.contact_form input:required, .contact_form textarea:required{
+
+    background:#fff url('../images/red_asterisk.png') no-repeat 98% center;
+
+}
+
+.contact_form input:focus:invalid, .contact_form textarea:focus:invalid{
+    background: #fff url('../images/invalid.png') no-repeat 99% center;
+}
+
+.contact_form input:valid, .contact_form textarea:valid{
+    background: #fff url('../images/invalid.png') no-repeat 99% center;
+}
+
+.form_hint{
+    background: #d45252;
+    border-radius: 4px 4px 4px 4px;
+    color:#ffff;
+    margin-left: 10px;
+    padding: 1px 6px;
+}
+
+.form_hint::before{
+    content: "\25C0";
+    color: #ffff;
+    left:30px;
+}
+
+.contact_form input:required:valid+.form_hint{
+    background:#28921f;
+}
+
+.contact_form input:required:valid + .form_hint{
+    background:#ffff;
+    color:#ffff;
+}
+
+.contact_form textarea:required:valid + .form_hint{
+    background:#ffff;
+    color:#ffff;
+}
